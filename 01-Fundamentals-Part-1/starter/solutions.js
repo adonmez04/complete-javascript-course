@@ -21,16 +21,12 @@ John weights 85 kg and is 1.76 m tall.
 GOOD LUCK 😀
 */
 
-// **************************************************************************
-// My Solution
-
-
 // TEST DATA 1: Marks weights 78 kg and is 1.69 m tall.
 //   John weights 92 kg and is 1.95 m tall.
-let marksMass = 78;
-let marksHeight = 1.69
-let johnMass = 92;
-let johnHeight = 1.95;
+// let marksMass = 78;
+// let marksHeight = 1.69
+// let johnMass = 92;
+// let johnHeight = 1.95;
 
 // TEST DATA 2: Marks weights 95 kg and is 1.88 m tall.
 //   John weights 85 kg and is 1.76 m tall.
@@ -41,38 +37,18 @@ let johnHeight = 1.95;
 
 // their BMI (Body Mass Index), which is calculated using the formula:
 // BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
-function BMI (mass, height){
-  return mass / (height * height);
-}
-
-let markBMI = BMI(marksMass, marksHeight);
-let johnBMI = BMI(johnMass, johnHeight);
+// function BMI (mass, height){
+//   return mass / (height * height);
+// }
+//
+// let markBMI = BMI(marksMass, marksHeight);
+// let johnBMI = BMI(johnMass, johnHeight);
 
 // let markHigherBMI2 = markBMI >= johnBMI;
 // console.log(markBMI, johnBMI)
 // console.log(markHigherBMI2);
 
 
-
-// **************************************************************************
-// The Official Solution
-
-// const massMark = 78;
-// const heightMark = 1.69;
-// const massJohn = 92;
-// const heightJohn = 1.95;
-
-
-// const massMark = 95;
-// const heightMark = 1.88;
-// const massJohn = 85;
-// const heightJohn = 1.76;
-//
-// const BMIMark = massMark / heightMark ** 2;
-// const BMIJohn = massJohn / (heightJohn * heightJohn);
-// const markHigherBMI = BMIMark > BMIJohn;
-//
-// console.log(BMIMark, BMIJohn, markHigherBMI);
 
 // **************************************************************************
 // Coding Challenge #2
@@ -92,9 +68,6 @@ HINT: Use an if/else statement 😉
 
 GOOD LUCK 😀
 */
-
-// **************************************************************************
-// My Solution
 
 // if (markBMI > johnBMI) {
 //   console.log(`Marks' BMI (${parseInt(markBMI)}) is higher than John's BMI (${parseInt(johnBMI)})...`);
@@ -143,38 +116,88 @@ Koalas score 109, 95 and 106
 GOOD LUCK 😀
 */
 
-function takeAverage(x, y, z){
-  let average;
-  average = (x+y+z) / 3;
-  return average.toFixed(0);
-}
-
-function checkWin (team1, team2){
-  if ((team1 || team2) >= 100){
-    if (team1 > team2){
-      console.log("Dolphins win the trophy!")
-    }
-    else if (team2 > team1){
-      console.log("Koalas win the trophy!")
-    }
-    else if (team1 === team2){
-      console.log("Draw!")
-    }
-  } else {
-    console.log("No team wins the trophy.");
-  }
-}
+// function takeAverage(x, y, z){
+//   let average;
+//   average = (x+y+z) / 3;
+//   return average.toFixed(0);
+// }
+//
+// function checkWin (team1, team2){
+//   if ((team1 || team2) >= 100){
+//     if (team1 > team2){
+//       console.log("Dolphins win the trophy!")
+//     }
+//     else if (team2 > team1){
+//       console.log("Koalas win the trophy!")
+//     }
+//     else if (team1 === team2){
+//       console.log("Draw!")
+//     }
+//   } else {
+//     console.log("No team wins the trophy.");
+//   }
+// }
 
 // TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
 // TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 // TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
-checkWin (takeAverage(97, 121, 101), takeAverage(109, 95, 123));
+// checkWin (takeAverage(97, 121, 101), takeAverage(109, 95, 123));
 
 
 
+// **************************************************************************
+// Coding Challenge #4
+// **************************************************************************
 
 
+/*
+Steven wants to build a very simple tip calculator
+for whenever he goes eating in a restaurant.
+In his country, it's usual to tip 15% if the bill value is between 50 and 300.
+If the value is different, the tip is 20%.
 
+1. Your task is to calculate the tip, depending on the bill value.
+Create a variable called 'tip' for this.
+It's not allowed to use an if/else statement 😅
+(If it's easier for you, you can start with an if/else statement, and then
+try to convert it to a ternary operator!)
+
+2. Print a string to the console containing
+the bill value, the tip, and the final value (bill + tip).
+Example: 'The bill was 275, the tip was 41.25, and the total value 316.25'
+
+TEST DATA: Test for bill values 275, 40 and 430
+
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+
+GOOD LUCK 😀
+*/
+
+// TEST DATA: Test for bill values 275, 40 and 430
+
+// let bill;
+// let tip;
+// let finalValue;
+
+// bill = 430;
+// tip = bill >= 50 && bill <= 300 ? (bill/100) * 15 : (bill/100) * 20;
+// finalValue = bill + tip;
+//
+// console.log(`The bill is ${bill}, the tip is ${tip} and the final value is ${finalValue}`);
+
+
+function finalBill(bill){
+  let tip;
+  let finalValue;
+  tip = bill >= 50 && bill <= 300 ? (bill/100) * 15 : (bill/100) * 20;
+  finalValue = bill + tip;
+  console.log(`The bill is ${bill}, the tip is ${tip} and the final value is ${finalValue}`);
+}
+
+finalBill(275);
+finalBill(40);
+finalBill(430);
 
 
